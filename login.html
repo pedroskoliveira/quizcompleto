@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Super Quiz de Tecnologia</title>
+    <link rel="stylesheet" href="estilo3.css">
+</head>
+<body>
+
+    <!-- Vídeo de fundo reaproveitado -->
+    <video autoplay loop muted id="video-fundo">
+        <source src="tecnologia.mp4" type="video/mp4">
+        Seu navegador não suporta a tag de vídeo.
+    </video>
+
+    <div class="envoltorio-conteudo">
+        <div class="container container-auth">
+            <h1>Super Quiz de Tecnologia</h1>
+            <p>Entre ou crie sua conta para jogar.</p>
+
+            <!-- FORMULÁRIO DE CADASTRO -->
+            <h2>Cadastro</h2>
+            <input type="text" id="cad-nome" placeholder="Seu nome completo">
+            <input type="email" id="cad-email" placeholder="Seu e-mail">
+            <input type="password" id="cad-senha" placeholder="Senha">
+            <button id="btn-cadastrar">Cadastrar</button>
+
+            <!-- FORMULÁRIO DE LOGIN -->
+            <h2>Login</h2>
+            <input type="email" id="login-email" placeholder="Seu e-mail">
+            <input type="password" id="login-senha" placeholder="Senha">
+            <button id="btn-login">Entrar</button>
+
+            <p id="mensagem-auth" class="texto-erro"></p>
+        </div>
+    </div>
+
+    <!-- IMPORTANTE: agora o script é módulo -->
+    <script type="module" src="script.js"></script>
+</body>
+</html>
