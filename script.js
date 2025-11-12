@@ -59,11 +59,11 @@ if (logoutBtn) {
 // CONTROLE SIMPLES DE ROTAS (login.html / index.html)
 
 // Descobre o arquivo atual (ex: "index.html", "login.html")
-const paginaAtual = window.location.pathname.split("/").pop() || "quiz.html";
+const paginaAtual = window.location.pathname.split("/").pop() || "index.html";
 
 // Observa mudanças de autenticação para redirecionar
 onAuthStateChanged(auth, (user) => {
-    if (paginaAtual === "quiz.html") {
+    if (paginaAtual === "index.html") {
         // Se estiver no quiz e não estiver logado, manda para login
         if (!user) {
             window.location.href = "login.html";
@@ -71,7 +71,7 @@ onAuthStateChanged(auth, (user) => {
     } else if (paginaAtual === "login.html") {
         // Se já estiver logado e está na página de login, manda para o quiz
         if (user) {
-            window.location.href = "quiz.html";
+            window.location.href = "index.html";
         }
     }
 });
@@ -118,7 +118,7 @@ async function cadastrarUsuario() {
 
         // Redireciona para o quiz
         setTimeout(() => {
-            window.location.href = "quiz.html";
+            window.location.href = "index.html";
         }, 1500);
 
     } catch (erro) {
@@ -153,7 +153,7 @@ async function logarUsuario() {
         }
 
         setTimeout(() => {
-            window.location.href = "quiz.html";
+            window.location.href = "index.html";
         }, 1000);
 
     } catch (erro) {
@@ -666,3 +666,4 @@ function reiniciarQuiz() {
 window.iniciarQuiz = iniciarQuiz;
 window.perguntaAnterior = perguntaAnterior;
 window.reiniciarQuiz = reiniciarQuiz;
+
